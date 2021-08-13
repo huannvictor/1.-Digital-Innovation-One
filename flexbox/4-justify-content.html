@@ -9,7 +9,12 @@
         *{
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        h1{
+        .container-parent{
+            border: 5px solid cornflowerblue;
+            width: fit-content;
+            height: fit-content;
+        }
+        h1, h2{
             color: blueviolet;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
@@ -22,7 +27,7 @@
         }
         .item{
             background-color: palevioletred;
-            margin: 5px;
+            margin: 2px;
             padding: 2px;
             text-align: center;
             color: whitesmoke;
@@ -38,60 +43,102 @@
         }
         .space-between{
             justify-content: space-between;
-            flex-flow: column wrap;
         }
         .space-around{
             justify-content: space-around;
-            flex-flow: column wrap;
+        }
+        .column{
+            flex-direction: column;
+            height: 220px;
         }
     </style>
 </head>
 <body>
-    <h1>flex-start (default)</h1>
-    <section class="container flex-start">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
+
+    <section class="container-parent"> <!--LINHA-->
+        <h1>ROW</h1>
+        <h2>flex-start (default)</h2>
+        <section class="container flex-start">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">outro item</div>
+        </section>
+        <h2>flex-end</h2>
+        <section class="container flex-end">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">outro item</div>
+        </section>
+        <h2>center</h2>
+        <section class="container center">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+        </section>
+        <h2>space between</h2>
+        <section class="container space-between">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+            <div class="item">6o item</div>
+            <div class="item">setimo item</div>
+            <div class="item">8o</div>
+        </section>
+        <h2>space around</h2>
+        <section class="container space-around">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+            <div class="item">6o item</div>
+            <div class="item">setimo item</div>
+            <div class="item">8o</div>
+        </section>
     </section>
 
-    <h1>flex-end</h1>
-    <section class="container flex-end">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">outro item</div>
-    </section>
-
-    <h1>center</h1>
-    <section class="container center">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">3o item</div>
-        <div class="item">quarto item</div>
-        <div class="item">quinto</div>
-    </section>
-
-    <h1>space between</h1>
-    <section class="container space-between">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">3o item</div>
-        <div class="item">quarto item</div>
-        <div class="item">quinto</div>
-        <div class="item">6o item</div>
-        <div class="item">setimo item</div>
-        <div class="item">8o</div>
-    </section>
-
-    <h1>space around</h1>
-    <section class="container space-around">
-        <div class="item">1</div>
-        <div class="item">item 2</div>
-        <div class="item">3o item</div>
-        <div class="item">quarto item</div>
-        <div class="item">quinto</div>
-        <div class="item">6o item</div>
-        <div class="item">setimo item</div>
-        <div class="item">8o</div>
+    <section class="container-parent"> <!--COLUNA-->
+        <h1>COLUMN</h1>
+        <h2>flex-start (default)</h2>
+        <section class="container flex-start column">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">outro item</div>
+        </section>
+        <h2>flex-end</h2>
+        <section class="container flex-end column">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">outro item</div>
+        </section>
+        <h2>center</h2>
+        <section class="container center column">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+        </section>
+        <h2>space between</h2>
+        <section class="container space-between column">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+        </section>
+        <h2>space around</h2>
+        <section class="container space-around column">
+            <div class="item">1</div>
+            <div class="item">item 2</div>
+            <div class="item">3o item</div>
+            <div class="item">quarto item</div>
+            <div class="item">quinto</div>
+        </section>
     </section>
 </body>
 </html>
