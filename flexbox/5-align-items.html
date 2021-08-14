@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+    <style>
+        *
+        {
+            font-family: Helvetica, sans-serif;
+        }
+        p
+        {
+            font: bold 20pt verdana;
+            color: palevioletred;
+        }
+        .container
+        {
+            display: flex;
+            max-width: 350px;
+            border: 1px solid maroon;
+        }
+        .item
+        {
+            flex: 1;
+            background-color: palevioletred;
+            color: whitesmoke;
+            margin: 5px;
+            padding: 3px;
+            text-align: center;
+        }
+        .center
+        {
+            align-items: center;
+        }
+        .stretch
+        {
+            align-items: stretch;
+        }
+        .start
+        {
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <p>center</p>
+    <section class="container center">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </section>
+    <p>stretch</p>
+    <secton class="container stretch">
+        <div class="item">Lorem.</div>
+        <div class="item">Harum, molestias.</div>
+        <div class="item">Aut, aliquam incidunt!</div>
+    </secton>
+    <p>flex-start</p>
+    <section class="container start">
+        <div class="item">Lorem.</div>
+        <div class="item">Quis, sed!</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing.</div>
+    </section>
+    <p>flex-end</p>
+    <section class="container end">
+        <div class="item">Lorem.</div>
+        <div class="item">Eum, enim.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
+    </section>
+
+</body>
+</html>
