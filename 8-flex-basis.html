@@ -6,10 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos - flex basis</title>
     <style>
-        
+        body
+        {
+            font: normal 1em helvetica;
+        }
+        h1, p
+        {
+            font-weight: bold;
+        }
+        .container
+        {
+            display: flex;
+            max-width: 500px;
+            border: 2px solid slateblue;
+        }
+        .item
+        {
+            background-color: cornflowerblue;
+            color: whitesmoke;
+            text-align: center;
+            margin: 5px;
+        }
+        .bauto
+        {
+            flex-basis: auto;
+        }
+        .bzero
+        {
+            flex-basis: 0;
+        }
+        .bnum
+        {
+            flex-basis: 10px;
+        }
+        .fg-1
+        {
+            flex-grow: 1;
+        }
+        .fg-2
+        {
+            flex-grow: 2;
+        }
+        .fg-3
+        {
+            flex-grow: 3;
+        }
+        .fg-4
+        {
+            flex-grow: 4;
+        }
+
     </style>
 </head>
 <body>
+    <p>basis: auto grow: 1-1-1-1</p>
+    <div class="container">
+        <div class="item fg-1 bauto">A</div>
+        <div class="item fg-1 bauto">AA</div>
+        <div class="item fg-1 bauto">AAA</div>
+        <div class="item fg-1 bauto">AAAA</div>
+    </div>
+    <p>basis: 0 grow: 1-1-1-1</p>
+    <div class="container">
+        <div class="item fg-1 bzero">A</div>
+        <div class="item fg-1 bzero">AA</div>
+        <div class="item fg-1 bzero">AAA</div>
+        <div class="item fg-1 bzero">AAAA</div>
+    </div>
+    
+    <p>basis: 10PX grow: 1-1-1-1</p>
+    <div class="container">
+        <div class="item fg-2 bnum">A</div>
+        <div class="item fg-2 bnum">AA</div>
+        <div class="item fg-2 bnum">AAA</div>
+        <div class="item fg-2 bnum">AAAA</div>
+    </div>
     
 </body>
 </html>
