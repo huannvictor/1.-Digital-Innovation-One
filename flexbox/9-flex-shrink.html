@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+    <style>
+        body
+        {
+            font-family: Helvetica, sans-serif;
+        }
+        h1, p
+        {
+            font-weight: bold;
+            color: slateblue;
+        }
+        .container
+        {
+            display: flex;
+            border: 2px solid slateblue;
+            max-width: 350px;
+        }
+        .item
+        {
+            background-color: cornflowerblue;
+            color: whitesmoke;
+            text-align: center;
+            margin: 5px;
+        }
+        .fs-1{flex-shrink: 1;}
+        .fg-1{flex-grow: 1;}
+    </style>
+</head>
+<body>
+    <p>flex-shrink: 1 (padrão)</p>
+    <div class="container">
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">A</div>
+        <div class="item fs-1 fg-1">A</div>
+    </div>
+
+    
+    <p>flex-shrink: 1 (padrão) - diferentes tamanhos</p>
+    <div class="container">
+        <div class="item fs-1 fg-1">Lorem, ipsum dolor.</div>
+        <div class="item fs-1 fg-1">Lorem, ipsum dolor.</div>
+        <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet  adipi sicing elit.</div>
+        <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet consec tetur.</div>
+        <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet elit. Et!</div>
+    </div>
+</body>
+</html>
