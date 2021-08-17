@@ -8,6 +8,9 @@
     max-width: 992px;
     width: 100%;
     margin: auto;
+    width: 100%;
+    min-width: 320px;
+    /* padding: 10px 15px; */
 }
 div img{
     display: block;
@@ -64,7 +67,6 @@ header .menu{
 }
 .apresentacao .txt-apresentacao{
     min-height: 200px;
-    max-width: 100%;
 }
 .txt-apresentacao h1{
     color: #122A57;
@@ -75,6 +77,10 @@ header .menu{
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+}
+#quem-somos img{
+    min-width: 320px;
+    margin: auto;
 }
 #quem-somos h2{
     font-size: 32px;
@@ -95,7 +101,7 @@ header .menu{
     width: 90%;
 }
 #quem-somos img{
-    min-width: 420px;
+    min-width: 320px;
 }
 .container-externo{
     background-color: #122A57;
@@ -216,5 +222,35 @@ footer .footer{
 @media(max-width: 992px){
     .flex-container{
         flex-direction: column;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao .txt-apresentacao{
+        max-width: 100%;
+    }
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+    .list-servicos{
+        flex-direction: column;
+    }
+    .list-servicos img{
+        width: 25%;
+        margin: auto;
+    }
+    .list-planos{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #planos h2{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .list-planos .item-plano{
+        max-width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
     }
 }
