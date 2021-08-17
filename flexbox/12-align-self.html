@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+    <style>
+        body{
+            font-family: helvetica;
+        }
+        h1{
+            font-size: 1.5em;
+            color: purple;
+        }
+        p{
+            font-size: 1.05em;
+            color: purple;
+        }
+        ul{
+            background: cornflowerblue;
+            color: whitesmoke;
+            padding: 15px 30px; 
+            border-radius: 15px;
+            max-width: fit-content;
+        }
+        div.cor{
+            display: inline-block;
+            background-color: goldenrod;
+            border: 1px solid goldenrod;
+            width: 15px;
+            height: 10px;
+            border-radius: 4px;
+        }
+        code{
+            background: wheat;
+            color: crimson;
+            border-radius: 5px;
+            padding: 1.5px 5px;
+        }
+        .container{
+            font-weight: bold;
+            display: flex;
+            border: 2px solid purple;
+            max-width: 350px;
+        }
+        .align-container{
+            align-items: center;
+        }
+        .height-container{
+            min-height: 150px;
+        }
+        .item{
+            background: goldenrod;
+            color: darkred;
+            text-align: center;
+            margin: 2px;
+        }
+        .center{
+            align-self: center;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .auto{
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>auto</h1>
+    <div class="container">
+        <div class="item auto">Lorem.</div>
+        <div class="item auto">Lorem, ipsum.</div>
+        <div class="item auto">Lorem,  doloripsum.</div>
+        <div class="item auto">dolor.</div>
+    </div>
+    <p>
+        Se o <code>align-self: auto;</code> for atribuído a um item com o contêiner <strong>sem ter</strong> a propriedade <code>align-items</code> o conteúdo será alocado de cima para baixo e preenchendo todo espaço disposto.
+    <br>
+        Esse comportamento fica claro quando percebemos que:
+        <ul>
+            <li>o texto está no topo do contêiner
+            <li>o conteúdo na cor <div class="cor"></div> <em>goldenrod</em> está ocupando todo espaçamento disposto:
+                <ul>
+                    <li>verticalmente ocupando o espaçamento disposto pelo <strong>contêiner</strong>
+                    <li>ocupando o espaçamento da <strong>largura</strong> disposta pelo <strong>conteúdo</strong>
+                </ul>
+        </ul>
+    </p>
+    <h1>align-self: center|auto|start|end|stretch</h1>
+    <div class="container align-container height-container">
+        <div class="item auto">auto</div>
+        <div class="item center">center</div>
+        <div class="item start">start.</div>
+        <div class="item end">end</div>
+        <div class="item stretch">stretch</div>
+    </div>
+    <p>
+        Quando atribui-se o <code>align-self: auto;</code> a um item que está num contêiner <strong>com a propriedade <code>align-items</code></strong>, ele se comporta centralizando o conteúdo e ocupando apenas o espço do mesmo.
+    </p>
+</body>
+</html>
