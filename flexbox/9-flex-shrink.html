@@ -19,7 +19,7 @@
         {
             display: flex;
             border: 2px solid slateblue;
-            max-width: 350px;
+            max-width: 450px;
         }
         .item
         {
@@ -28,8 +28,25 @@
             text-align: center;
             margin: 5px;
         }
-        .fs-1{flex-shrink: 1;}
-        .fg-1{flex-grow: 1;}
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fs-0{
+            flex-shrink: 0;
+            /* flex-basis: 200px; */
+        }
+        .fs-1{
+            flex-shrink: 1;            
+            /* flex-basis: 100px; */
+        } /*padrão pode ser comprimido X vezes tal qual seja possível*/
+        .fs-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+        .fs-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
     </style>
 </head>
 <body>
@@ -41,8 +58,6 @@
         <div class="item fs-1 fg-1">A</div>
         <div class="item fs-1 fg-1">A</div>
     </div>
-
-    
     <p>flex-shrink: 1 (padrão) - diferentes tamanhos</p>
     <div class="container">
         <div class="item fs-1 fg-1">Lorem, ipsum dolor.</div>
@@ -50,6 +65,21 @@
         <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet  adipi sicing elit.</div>
         <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet consec tetur.</div>
         <div class="item fs-1 fg-1">Lorem ipsum dolor sit amet elit. Et!</div>
+    </div>
+    <p>flex-shrink: 0</p>
+    <div class="container">
+        <div class="item fs-0 fg-1">Lorem ipsum dolor sit amet consectetur.</div>
+        <div class="item fs-0 fg-1">Lorem ipsum dolor sit.</div>
+        <div class="item fs-0 fg-1">A</div>
+        <div class="item fs-0 fg-1">A</div>
+    </div>
+
+    <p>flex-shink: mix | basis: 100px</p>
+    <div class="container">
+        <div class="item fg-1 fs-0">Lorem, ipsum.</div>
+        <div class="item fg-1 fs-1">Lorem ipsum dolor sit. Lorem, ipsum.</div>
+        <div class="item fg-1 fs-2">Lorem, ipsum dolor.</div>
+        <div class="item fg-1 fs-3">A</div>
     </div>
 </body>
 </html>
